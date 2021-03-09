@@ -1,452 +1,1419 @@
 
+
 <!DOCTYPE html>
-<html lang="en" ng-app="communityFrontendApp" ng-strict-di state-attr>
-	<head>
-		<meta charset="utf-8">
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2ff0bc8e20","applicationID":"4115141","transactionName":"c1hbEkVfCgoHQhkBV11aQAheRB85BEJZDExVWVFJW1kEFANCTz1VX1NQCkQfFQ4NRw==","queueTime":1,"applicationTime":24,"agent":""}</script>
-<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VgEBWVNWGwcBVVRTAwA=",licenseKey:"2ff0bc8e20",applicationID:"4115141"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(23),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(24),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
-<meta name="robots" content="noodp">
-<meta name="MSSmartTagsPreventParsing" content="true">
-<meta name="google-site-verification" content="sRcy8COOEVzfXadS3NzNsefhbSouqvlesgWngH5kKxs">
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="0BfsgOaunMaJZUXYlgXbkcFu6VfKXJi25nOYKefGGwWwE4T694vSplQgdz1t2aaa07RuzY1TpxrOyKGqD5SI5w==" />
-<link rel="shortcut icon" type="image/x-icon" href="https://d1pspl52z5rk07.cloudfront.net/assets/production/app/gc-favicon-a72626818daa8e9ba228f4c4a946812925c13c5bd42d8168c875447a1be927fa.ico" />
+<html lang="en-US">
+<head>
+<title>HTML Tutorial</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
 
-		<meta name="fragment" content="!">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" ng-attr-content="{{meta.description}}" content="The GrabCAD Library offers millions of free CAD designs, CAD files, and 3D models. Join the GrabCAD Community today to gain access and download!">
-		<base href="/">
-		<meta name="prerender-status-code" content="{{meta.statusCode}}">
-		<link rel="stylesheet" href="/static/gc-hoops-viewer-131/community/bundle.css">
-		<script id="viewersrc" type="text/javascript" data-src="/static/gc-hoops-viewer-131/community/bundle.js"></script>
-		<title ng-bind="title">Free CAD Designs, Files & 3D Models | The GrabCAD Community Library</title>
-		<link rel="stylesheet" media="screen" href="https://d1pspl52z5rk07.cloudfront.net/assets/production/app/application_community-864f6b70678d630eafc5ecedc19755a216b18f1da442607e4b8c27c6115c2314.css" />
-		
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-17245501-6"></script>
 <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-17245501-6');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
 </script>
-<style>.async-hide .ab-testable-element { opacity: 0 !important} </style>
-<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-	h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-	(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-})(window,document.documentElement,'async-hide','dataLayer',4000,
-	{'GTM-NXVV8ZB':true});</script>
 
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-		<link ng-if="relNextPrev.prev" rel="prev" href="{{relNextPrev.prev}}">
-		<link ng-if="relNextPrev.next" rel="next" href="{{relNextPrev.next}}">
-	</head>
-	<body id="community_frontend-library_models"  ng-class="{'initial-load-completed': initialLoadCompleted}" class="community-frontend text-normal">
-		<noscript><img src="/assets/community_frontend/track_no_js.png"><div class="noscript-warning">Please enable JavaScript to use GrabCAD</div></noscript>
-		<header class="community" ng-non-bindable>
-  <nav class="main">
-    <div class="headerMainMenu">
-      <ul class="app-menu">
-	<li class="app-selection-menu hover-element">
-		<a class="selected-app link-mobile-disabled" href="https://grabcad.com/dashboard">
-			<span class="grabcad-logo grabcad-logo-community"></span>
-			<span class="dropdown-icon">
-				<svg width="10" height="11" viewBox="0 0 1024 1024">
-					<path d="M1025 320q0 -26 -19 -45t-45 -19h-896q-26 0 -45 19t-19 45t19 45l448 448q19 19 45 19t45 -19l448 -448q19 -19 19 -45z" fill="#fff"/>
-				</svg>
-			</span>
-		</a>
-		<ul class="selection lightDropdown">
-			<li>
-				<a class="text-normal " target="_self" href="/shop">
-					<span class="translation_missing" title="translation missing: en.navigation.main.shop">Shop</span><i class="gc-icon gc-icon-check-circle"></i>
-</a>			</li>
-			<li>
-				<a class="text-normal " target="_self" href="/print/account">
-					Print<i class="gc-icon gc-icon-check-circle"></i>
-</a>			</li>
-			<li>
-				<a class="text-normal " href="https://workbench.grabcad.com/workbench"  target="_self">
-					Workbench<i class="gc-icon gc-icon-check-circle"></i>
-				</a>
-			</li>
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("/", "");
+    folder = folder.substr(0, folder.indexOf("/"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
 
-			<li class="separator"></li>
+</script>
+<script src="//cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "https://www.w3schools.com/images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
+</script>
+<script async type="text/javascript" src="//cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
 
-			<li>
-				<a class="text-normal active" href="https://grabcad.com/dashboard" target="_self">
-					Community<i class="gc-icon gc-icon-check-circle"></i>
-				</a>
-			</li>
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
 
-		</ul>
-	</li>
-</ul>
+  });
+</script>
+<script src="/lib/my-learning.js?v=1.0.2"></script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
 
-      <label for="showMenu" class="showMenu">
-	<span class="menuIcon"><span></span></span>
-</label>
-<input type="checkbox" id="showMenu" role="button">
-	<ul class="login-menu">
-		<li>
-			<a data-toggle="modal" href="https://grabcad.com/community/login" class="login" target="_self">
-				Log in
-			</a>
-		</li>
-	</ul>
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+<style>  
+.w3-third .bigbtn {
+ border:1px solid #e3e3e3;
+ background-color:#F1F1F1;
+ color:#555;
+ margin-bottom:16px;
+ width:100%;
+ padding:20px 0;
+ text-align: center;
+ vertical-align: middle;
+ display: inline-block;
+ text-decoration:none !important;
+}
+ 
+.bigbtn:hover, .bigbtn2:hover {
+  background-color: #555; 
+  color: #ffffff !important;
+  border: 1px solid #555;
+}
 
+@media screen and (max-width: 992px){
+.bigbtn {
+  display: block;
+  width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='//www.w3schools.com'>w3schools<span class='dotcom'>.com</span></a>
 
-      <ul class="menu">
-        <li class="communityMenu">
-          <ul>
-            <li class="selected">
-              <a target="_self" href="https://grabcad.com/library">
-                <span>Library</span>
-              </a>
-            </li>
-            <li >
-              <a target="_self" href="https://grabcad.com/challenges">
-                <span>Challenges</span>
-              </a>
-            </li>
-            <li class="communityMenu__groups ">
-              <a target="_self" href="https://grabcad.com/groups">
-                <span>Groups</span>
-              </a>
-            </li>
-            <li class="">
-              <a target="_self" href="https://grabcad.com/questions">
-                <span>Questions</span>
-              </a>
-            </li>
-            <li >
-              <a target="_self" href="https://grabcad.com/tutorials">
-                <span>Tutorials</span>
-              </a>
-            </li>
-            <li >
-              <a target="_self" href="https://grabcad.com/engineers">
-                <span>Engineers</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="rightMenu">
-          <ul>
-            <li class="staticMenu">
-              <ul>
-                <li>
-                  <a target="_self" href="https://blog.grabcad.com/">
-                    <span>Blog</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="personalMenu logged-out">
-              <ul>
-                <li class="account hover-element ">
-                    <ul class="login">
-                      <li>
-                        <a target="_self" href="/community/login?return=true" class="login">Log in</a>
-                      </li>
-                    </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
+<!--  <a href='//www.w3schools.com' class='fa fa-logo xw3-text-green' style="font-size:50px;margin-top:-30px" title='Home'></a> -->
+  <div id="loginactioncontainer" class='w3-right'>
+    <div id="mypagediv"></div>
+<!--    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>-->
+    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='window.open("https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F")'>LOG IN</button>
+  </div>
+
+  <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
+    THE WORLD'S LARGEST WEB DEVELOPER SITE
+  </div>
+
+</div>
+
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <div class='gcse-search'></div>
+</div>
+<div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div>
+
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='/default.asp' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='/html/default.asp' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='/css/default.asp' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='/js/default.asp' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='/sql/default.asp' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='/python/default.asp' title='Python Tutorial'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='/php/default.asp' title='PHP Tutorial'>PHP</a>
+      <a class="w3-bar-item w3-button" href='/bootstrap/bootstrap_ver.asp' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='/howto/default.asp' title='How To'>HOW TO</a>
+      <a class="w3-bar-item w3-button" href='/w3css/default.asp' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='/jquery/default.asp' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='/java/default.asp' title='Java Tutorial'>JAVA</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://shop.w3schools.com'>SHOP</a>
+
+      <a class="w3-bar-item w3-button w3-right" href='https://courses.w3schools.com' target='blank' title='Courses' onclick="ga('send', 'event', 'Courses' , 'Clicked on courses in top navigation');">COURSES</a>
+
+      <!--
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      -->
+      
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right w3-hide-medium" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
     </div>
-  </nav>
-</header>
-
-
-		<div class="blank" ng-class="{'initial-load-completed': initialLoadCompleted}"></div>
-
-		
-
-		<div class="alerts">
-			<community-alert class="community-alert" ng-repeat="alert in alerts track by $index"></community-alert>
-		</div>
-
-		<div class="contentWrapper" ui-view></div>
-		  <div id="signInModal" v-cloak>
-    <transition name="wrap-transition">
-      <div class="sign-in-modal__wrap" :class="{'sign-in-modal__wrap--permanent': permanent}" v-if="active">
-        <div class="sign-in-modal__wrap--backdrop" v-if="!permanent" @click="close"></div>
-        <div class="sign-in-modal__modal">
-          <div class="sign-in-modal__header">
-            <h4 class="sign-in-modal__title" v-if="state !== 'forgotPassword'">
-              Sign In or Create Account
-            </h4>
-
-            <h4 class="sign-in-modal__title" v-if="state === 'forgotPassword'" v-cloak>
-              Forgot password
-            </h4>
-
-            <a href="#" class="sign-in-modal__close" @click.prevent="close" v-if="!permanent">&times;</a>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML and CSS</h3>
+          <a class="w3-bar-item w3-button" href='/html/default.asp'>Learn HTML</a>
+          <a class="w3-bar-item w3-button" href='/css/default.asp'>Learn CSS</a>
+          <a class="w3-bar-item w3-button" href='/bootstrap/bootstrap_ver.asp'>Learn Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='/w3css/default.asp'>Learn W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='/colors/default.asp'>Learn Colors</a>
+          <a class="w3-bar-item w3-button" href='/icons/default.asp'>Learn Icons</a>
+          <a class="w3-bar-item w3-button" href='/graphics/default.asp'>Learn Graphics</a>
+          <a class="w3-bar-item w3-button" href='/graphics/svg_intro.asp'>Learn SVG</a>
+          <a class="w3-bar-item w3-button" href='/graphics/canvas_intro.asp'>Learn Canvas</a>
+          <a class="w3-bar-item w3-button" href='/howto/default.asp'>Learn How To</a>
+          <a class="w3-bar-item w3-button" href='/sass/default.php'>Learn Sass</a>          
+          <div class="w3-hide-large w3-hide-small">
+          <h3>Artificial Intelligence</h3>
+          <a class="w3-bar-item w3-button" href="/ai/default.asp">Learn AI</a>
+          <a class="w3-bar-item w3-button" href='/python/python_ml_getting_started.asp'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='/datascience/default.asp'>Learn Data Science</a>
+          <a class="w3-bar-item w3-button" href='/python/pandas/default.asp'>Learn Pandas</a>
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='/xml/default.asp'>Learn XML</a>
+            <a class="w3-bar-item w3-button" href='/xml/ajax_intro.asp'>Learn XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="/xml/dom_intro.asp">Learn XML DOM</a>
+            <a class="w3-bar-item w3-button" href='/xml/xml_dtd_intro.asp'>Learn XML DTD</a>
+            <a class="w3-bar-item w3-button" href='/xml/schema_intro.asp'>Learn XML Schema</a>
+            <a class="w3-bar-item w3-button" href='/xml/xsl_intro.asp'>Learn XSLT</a>
+            <a class="w3-bar-item w3-button" href='/xml/xpath_intro.asp'>Learn XPath</a>
+            <a class="w3-bar-item w3-button" href='/xml/xquery_intro.asp'>Learn XQuery</a>
           </div>
-          <transition name="sign-in-modal__transition" mode="out-in">
-            <div v-if="state === 'login'" class="sign-in-modal__body" :key="0">
-              <form @submit.prevent="login" method="post" id="login_form">
-                <div class="sign-in__input-block">
-                  <i class="fas fa-envelope sign-in__input-icon"></i>
-
-                  <input type="email"
-                    v-model="email"
-                    name="member[email]"
-                    placeholder="Enter email"
-                    class="sign-in__input sign-in__input--email"
-                    autocomplete="off">
-                </div>
-
-                <div class="sign-in__input-wrap">
-                  <div class="sign-in__input-block">
-                    <i class="fas fa-lock sign-in__input-icon"></i>
-                    <input type="password"
-                      v-model="password"
-                      placeholder="Enter password"
-                      name="member[password]"
-                      class="sign-in__input sign-in__input--password"
-                      autocomplete="off"
-                      v-if="!passwordVisible">
-                    <input type="text"
-                      v-model="password"
-                      placeholder="Enter password"
-                      name="member[password]"
-                      class="sign-in__input sign-in__input--password"
-                      autocomplete="off"
-                      v-else v-cloak>
-
-                    <a href="#" @click.prevent="togglePasswordVisibility"
-                       class="sign-in__input--password-visibility">
-                      <i class="fas fa-eye" v-if="!passwordVisible"></i>
-                      <i class="fas fa-eye-slash" v-else v-cloak></i>
-                    </a>
-                  </div>
-                  <a href="#" @click.prevent="state = 'forgotPassword'" class="sign-in__forgot-password">
-                    <i class="fas fa-question"></i>
-                  </a>
-                </div>
-
-                <div class="sign-in__error" v-if="error && error.length" v-text="error" v-cloak></div>
-
-                <button class="sign-in__button" disabled="true" :disabled="buttonDisabled" type="submit" :id="'signInButton'">Sign In</button>
-              </form>
-
-              <div class="sign-in__social-network-buttons">
-                <form action="/auth/facebook" method="post">
-                  <input type="hidden" name="authenticity_token" :value="csrfToken">
-
-                  <button type="submit" class="sign-in__social-network-button sign-in__social-network-button--facebook">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-                </form>
-                <form action="/auth/linkedin" method="post">
-                  <input type="hidden" name="authenticity_token" :value="csrfToken">
-
-                  <button type="submit" class="sign-in__social-network-button sign-in__social-network-button--linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                  </button>
-                </form>
-                <form action="/auth/google_oauth2" method="post">
-                  <input type="hidden" name="authenticity_token" :value="csrfToken">
-
-                  <button type="submit" class="sign-in__social-network-button sign-in__social-network-button--google">
-                    <i class="fab fa-google"></i>
-                  </button>
-                </form>
-              </div>
-
-              <div class="sign-in__or-wrap">
-                <hr class="sign-in__or-hr">
-
-                <div class="sign-in__or">or</div>
-
-                <hr class="sign-in__or-hr">
-              </div>
-              <a href="/profile/register" target="_self" class="sign-in__button">
-                Create Account
-              </a>
-            </div>
-            <form class="sign-in-modal__body"
-              v-if="state === 'forgotPassword'"
-              :key="1"
-              @submit.prevent="passwordReset"
-              method="post"
-              v-cloak>
-              <div class="sign-in__input-block">
-                <i class="fas fa-envelope sign-in__input-icon"></i>
-
-                <input type="email"
-                 v-model="forgotPasswordEmail"
-                 name="member[email]"
-                 placeholder="Enter email"
-                 class="sign-in__input sign-in__input--email"
-                 autocomplete="off">
-              </div>
-
-              <div class="sign-in__error" v-if="forgotPasswordError && forgotPasswordError.length" v-text="forgotPasswordError" v-cloak></div>
-
-              <button class="sign-in__button" :disabled="forgotPasswordEmail.length < 1 || buttonDisabled" type="submit">Send Email</button>
-
-              <div class="sign-in__back-to-login-wrap">
-                <a href="#" class="sign-in__back-to-login" @click.prevent="state = 'login'">Back to Login Form</a>
-              </div>
-            </form>
-            <div v-if="state === 'forgotPasswordEmailSent'" class="sign-in-modal__body" :key="2" v-cloak>
-              <div class="sign-in-modal__alert">
-                <img src="https://d1pspl52z5rk07.cloudfront.net/assets/production/app/confirmation/green_tick-e2f4c3ce46722430dc7a9a0a72eba2ee91381a92e16094440d6cd893ec6f5d9d.svg" alt="">
-
-                <div>The email with your password reset link has been sent.</div>
-              </div>
-
-              <p class="sign-in-modal__text">If you don't receive the email within an hour (and you've checked your Spam folder), email us as confirmation@grabcad.com.</p>
-
-              <div class="sign-in__back-to-login-wrap">
-                <a href="#" class="sign-in__back-to-login" @click.prevent="state = 'login'">Back to Login Form</a>
-              </div>
-            </div>
-          </transition>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='/js/default.asp'>Learn JavaScript</a>
+          <a class="w3-bar-item w3-button" href='/jquery/default.asp'>Learn jQuery</a>
+          <a class="w3-bar-item w3-button" href='/react/default.asp'>Learn React</a>
+          <a class="w3-bar-item w3-button" href='/angular/default.asp'>Learn AngularJS</a>
+          <a class="w3-bar-item w3-button" href="/js/js_json_intro.asp">Learn JSON</a>
+          <a class="w3-bar-item w3-button" href='/js/js_ajax_intro.asp'>Learn AJAX</a>
+          <a class="w3-bar-item w3-button" href="/appml/default.asp">Learn AppML</a>
+          <a class="w3-bar-item w3-button" href="/w3js/default.asp">Learn W3.JS</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='/python/default.asp'>Learn Python</a>
+          <a class="w3-bar-item w3-button" href='/java/default.asp'>Learn Java</a>
+          <a class="w3-bar-item w3-button" href='/cpp/default.asp'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='/cs/default.asp'>Learn C#</a>
+          <a class="w3-bar-item w3-button" href='/r/default.asp'>Learn R</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='/sql/default.asp'>Learn SQL</a>
+          <a class="w3-bar-item w3-button" href='/php/default.asp'>Learn PHP</a>
+          <a class="w3-bar-item w3-button" href='/asp/default.asp'>Learn ASP</a>
+          <a class="w3-bar-item w3-button" href='/nodejs/default.asp'>Learn Node.js</a>
+          <a class="w3-bar-item w3-button" href='/nodejs/nodejs_raspberrypi.asp'>Learn Raspberry Pi</a>          
+          <h3>Web Building</h3>
+          <a class="w3-bar-item w3-button" href="/w3css/w3css_templates.asp">Web Templates</a>
+          <a class="w3-bar-item w3-button" href='/browsers/default.asp'>Web Statistics</a>
+          <a class="w3-bar-item w3-button" href='/cert/default.asp'>Web Certificates</a>
+          <a class="w3-bar-item w3-button" href='/tryit/default.asp'>Web Editor</a>
+          <a class="w3-bar-item w3-button" href="/whatis/default.asp">Web Development</a>
+          <a class="w3-bar-item w3-button" href="/typingspeed/default.asp">Test Your Typing Speed</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>Artificial Intelligence</h3>
+          <a class="w3-bar-item w3-button" href="/ai/default.asp">Learn AI</a>
+          <a class="w3-bar-item w3-button" href='/python/python_ml_getting_started.asp'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='/datascience/default.asp'>Learn Data Science</a>
+          <a class="w3-bar-item w3-button" href='/python/pandas/default.asp'>Learn Pandas</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='/xml/default.asp'>Learn XML</a>
+          <a class="w3-bar-item w3-button" href='/xml/ajax_intro.asp'>Learn XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="/xml/dom_intro.asp">Learn XML DOM</a>
+          <a class="w3-bar-item w3-button" href='/xml/xml_dtd_intro.asp'>Learn XML DTD</a>
+          <a class="w3-bar-item w3-button" href='/xml/schema_intro.asp'>Learn XML Schema</a>
+          <a class="w3-bar-item w3-button" href='/xml/xsl_intro.asp'>Learn XSLT</a>
+          <a class="w3-bar-item w3-button" href='/xml/xpath_intro.asp'>Learn XPath</a>
+          <a class="w3-bar-item w3-button" href='/xml/xquery_intro.asp'>Learn XQuery</a>
         </div>
       </div>
-    </transition>
-</div>
-
-<script src="https://d1pspl52z5rk07.cloudfront.net/assets/production/app/styleguide/sign_in_modal_app-c65ebd086d416de5c7cb8a593e1017b81a61f34539722f323d8416dda7357baa.js"></script>
-
-
-<footer class="community">
-  <div>
-    <nav>
-      <ul>
-        <li class="text-small">Community</li>
-        <li><a target="_self" href="https://grabcad.com/library">Library</a></li>
-        <li><a target="_self" href="https://grabcad.com/challenges">Challenges</a></li>
-        <li><a target="_self" href="https://grabcad.com/groups">Groups</a></li>
-        <li><a target="_self" href="https://grabcad.com/questions">Questions</a></li>
-        <li><a target="_self" href="https://grabcad.com/tutorials">Tutorials</a></li>
-        <li><a target="_self" href="https://grabcad.com/engineers">Engineers</a></li>
-      </ul>
-      <ul>
-        <li class="text-small">Workbench</li>
-        <li><a target="_self" href="https://grabcad.com/workbench">Overview</a></li>
-        <li><a target="_self" href="https://grabcad.com/workbench/features">Features</a></li>
-        <li><a target="_self" href="https://grabcad.com/workbench/compare">Compare</a></li>
-      </ul>
-      <ul>
-        <li class="text-small">Print</li>
-        <li><a target="_self" href="https://grabcad.com/print">Overview</a></li>
-        <li><a target="_self" href="https://grabcad.com/print/features">Features</a></li>
-      </ul>
-      <ul>
-        <li class="text-small"><span class="translation_missing" title="translation missing: en.navigation.footer.shop">Shop</span></li>
-        <li><a target="_self" href="https://grabcad.com/shop">Overview</a></li>
-        <li><a target="_self" href="https://grabcad.com/shop/features">Features</a></li>
-        <li><a target="_self" href="https://grabcad.com/shop/compare"><span class="translation_missing" title="translation missing: en.navigation.print.compare">Compare</span></a></li>
-      </ul>
-      <ul>
-        <li class="text-small">Resources</li>
-        <li><a target="_self" href="https://blog.grabcad.com">Blog</a></li>
-        <li><a target="_self" href="https://resources.grabcad.com">Resource Center</a></li>
-        <li><a target="_blank" href="https://help.grabcad.com">Help Center</a></li>
-      </ul>
-      <ul>
-        <li class="text-small">About us</li>
-        <li><a target="_self" href="https://resources.grabcad.com/company/">Company</a></li>
-        <li><a target="_self" href="https://blog.grabcad.com/jobs/">Jobs</a></li>
-      </ul>
-    </nav>
-
-
-    <section>
-      <div class="text-normal links">
-        <a target="_self" href="mailto:info@grabcad.com">info@grabcad.com</a>
-        <a target="_self" href="https://grabcad.com/terms">Website Terms of Use</a>
-        <a target="_self" href="https://grabcad.com/software_terms">Software Terms of Use</a>
-        <a target="_self" href="https://grabcad.com/privacy_policy">Privacy policy</a>
-        <a target="_self" href="https://help.grabcad.com/article/232-your-data-on-grabcad">Your Data on GrabCAD</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/grabcad">Twitter</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/grabcadcommunity/">Instagram</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/GrabCAD">Facebook</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/grabcad/">LinkedIn</a>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='/tags/default.asp'>HTML Tag Reference</a>
+          <a class="w3-bar-item w3-button" href='/tags/ref_html_browsersupport.asp'>HTML Browser Support</a>
+          <a class="w3-bar-item w3-button" href='/tags/ref_eventattributes.asp'>HTML Event Reference</a>
+          <a class="w3-bar-item w3-button" href='/colors/default.asp'>HTML Color Reference</a>
+          <a class="w3-bar-item w3-button" href='/tags/ref_attributes.asp'>HTML Attribute Reference</a>
+          <a class="w3-bar-item w3-button" href='/tags/ref_canvas.asp'>HTML Canvas Reference</a>
+          <a class="w3-bar-item w3-button" href='/graphics/svg_reference.asp'>HTML SVG Reference</a>
+          <a class="w3-bar-item w3-button" href='/charsets/default.asp'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='/graphics/google_maps_reference.asp'>Google Maps Reference</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='/cssref/default.asp'>CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='/cssref/css3_browsersupport.asp'>CSS Browser Support</a>
+          <a class="w3-bar-item w3-button" href='/cssref/css_selectors.asp'>CSS Selector Reference</a>
+          <a class="w3-bar-item w3-button" href='/bootstrap/bootstrap_ref_all_classes.asp'>Bootstrap 3 Reference</a>
+          <a class="w3-bar-item w3-button" href='/bootstrap4/bootstrap_ref_all_classes.asp'>Bootstrap 4 Reference</a>
+          <a class="w3-bar-item w3-button" href='/w3css/w3css_references.asp'>W3.CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='/icons/icons_reference.asp'>Icon Reference</a>
+          <a class="w3-bar-item w3-button" href='/sass/sass_functions_string.php'>Sass Reference</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='/jsref/default.asp'>JavaScript Reference</a>
+          <a class="w3-bar-item w3-button" href='/jsref/default.asp'>HTML DOM Reference</a>
+          <a class="w3-bar-item w3-button" href='/jquery/jquery_ref_overview.asp'>jQuery Reference</a>
+          <a class="w3-bar-item w3-button" href='/angular/angular_ref_directives.asp'>AngularJS Reference</a>
+          <a class="w3-bar-item w3-button" href="/appml/appml_reference.asp">AppML Reference</a>
+          <a class="w3-bar-item w3-button" href="/w3js/w3js_references.asp">W3.JS Reference</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='/python/python_reference.asp'>Python Reference</a>
+          <a class="w3-bar-item w3-button" href='/java/java_ref_keywords.asp'>Java Reference</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='/sql/sql_ref_keywords.asp'>SQL Reference</a>
+          <a class="w3-bar-item w3-button" href='/php/php_ref_overview.asp'>PHP Reference</a>
+          <a class="w3-bar-item w3-button" href='/asp/asp_ref_response.asp'>ASP Reference</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='/xml/dom_nodetype.asp'>XML Reference</a>
+          <a class="w3-bar-item w3-button" href='/xml/dom_http.asp'>XML Http Reference</a>
+          <a class="w3-bar-item w3-button" href='/xml/xsl_elementref.asp'>XSLT Reference</a>
+          <a class="w3-bar-item w3-button" href='/xml/schema_elements_ref.asp'>XML Schema Reference</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Character Sets</h3>
+          <a class="w3-bar-item w3-button" href='/charsets/default.asp'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='/charsets/ref_html_ascii.asp'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='/charsets/ref_html_ansi.asp'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='/charsets/ref_html_ansi.asp'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='/charsets/ref_html_8859.asp'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='/charsets/ref_html_symbols.asp'>HTML Symbols</a>
+          <a class="w3-bar-item w3-button" href='/charsets/ref_html_utf8.asp'>HTML UTF-8</a>
+        </div>
       </div>
-      <div class="text-normal">
-        © 2021 GrabCAD, a STRATASYS solution
-        <span class="stratasys-logo">
-          <a href="https://www.stratasys.com/" target="_blank" rel="noopener noreferrer"><img src="https://d1pspl52z5rk07.cloudfront.net/assets/production/app/styleguide/svg/stratasys-logo-c67b8d9b1be24d16c65a66fac5e99560490db03fa24aafe16d2367b9d064bd38.svg" /></a>
-        </span>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Exercises</h3>
+          <a class="w3-bar-item w3-button" href="/html/html_exercises.asp">HTML Exercises</a>
+          <a class="w3-bar-item w3-button" href="/css/css_exercises.asp">CSS Exercises</a>
+          <a class="w3-bar-item w3-button" href="/js/js_exercises.asp">JavaScript Exercises</a>
+          <a class="w3-bar-item w3-button" href="/sql/sql_exercises.asp">SQL Exercises</a>
+          <a class="w3-bar-item w3-button" href="/php/php_exercises.asp">PHP Exercises</a>
+          <a class="w3-bar-item w3-button" href="/python/python_exercises.asp">Python Exercises</a>
+          <a class="w3-bar-item w3-button" href="/jquery/jquery_exercises.asp">jQuery Exercises</a>
+          <a class="w3-bar-item w3-button" href="/bootstrap/bootstrap_exercises.asp">Bootstrap Exercises</a>
+          <a class="w3-bar-item w3-button" href="/java/java_exercises.asp">Java Exercises</a>
+          <a class="w3-bar-item w3-button" href="/cpp/cpp_exercises.asp">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="/cs/cs_exercises.asp">C# Exercises</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Quizzes</h3>
+          <a class="w3-bar-item w3-button" href='/html/html_quiz.asp' target='_top'>HTML Quiz</a>
+          <a class="w3-bar-item w3-button" href='/css/css_quiz.asp' target='_top'>CSS Quiz</a>
+          <a class="w3-bar-item w3-button" href='/js/js_quiz.asp' target='_top'>JavaScript Quiz</a>
+          <a class="w3-bar-item w3-button" href="/sql/sql_quiz.asp" target="_top">SQL Quiz</a>
+          <a class="w3-bar-item w3-button" href='/php/php_quiz.asp' target='_top'>PHP Quiz</a>
+          <a class="w3-bar-item w3-button" href='/python/python_quiz.asp' target='_top'>Python Quiz</a>
+          <a class="w3-bar-item w3-button" href='/jquery/jquery_quiz.asp' target='_top'>jQuery Quiz</a>
+          <a class="w3-bar-item w3-button" href='/bootstrap/bootstrap_quiz.asp' target='_top'>Bootstrap Quiz</a>
+          <a class="w3-bar-item w3-button" href='/java/java_quiz.asp' target='_top'>Java Quiz</a>
+          <a class="w3-bar-item w3-button" href='/cpp/cpp_quiz.asp' target='_top'>C++ Quiz</a>
+          <a class="w3-bar-item w3-button" href='/cs/cs_quiz.asp' target='_top'>C# Quiz</a>
+          <a class="w3-bar-item w3-button" href='/xml/xml_quiz.asp' target='_top'>XML Quiz</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3><a style="padding-left:0!important;text-decoration:none;" href="/cert/default.asp">Certificates</a></h3>
+         <a class="w3-bar-item w3-button" href="/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_css.asp" target="_top">CSS Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_frontend.asp" target="_top">Front End Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_sql.asp" target="_top">SQL Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_php.asp" target="_top">PHP Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_python.asp" target="_top">Python Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_java.asp" target="_top">Java Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_jquery.asp" target="_top">jQuery Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_bootstrap.asp" target="_top">Bootstrap Certificate</a>
+         <a class="w3-bar-item w3-button" href="/cert/cert_xml.asp" target="_top">XML Certificate</a>
+        </div>
       </div>
-      <div class="text-small">
-        The Computer-Aided Design (&quot;CAD&quot;) files and all associated content posted to this website are created, uploaded, managed and owned by third party users. Each CAD and any associated text, image or data is in no way sponsored by or affiliated with any company, organization or real-world item, product, or good it may purport to portray.
+      <br>
+    </div>
+
+
+
+    <div id='nav_login' class='w3-bar-block w3-card-2' style="display:none">
+      <span onclick='w3_close_nav("login")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class="loginmodaldiv" style="padding:48px 16px 1px 16px;text-align:center;">
+        <h2>LOG IN</h2>
+        <div style="font-size:15px"><a href="https://mypage.w3schools.com/mypage/index.php">Why Log In?</a></div>
+        <div class="loginmodalform">
+          <form id="loginform" name="loginform" autocomplete="off" method="post">
+            <div><label>Username</label></div>
+            <div><input type="email" name="n" placeholder="Enter your e-mail address" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div><label>Password</label></div>
+            <div><input type="password" name="p" placeholder="Enter Your Password" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div id="loginerrordiv" style="display:none" class="w3-text-red"></div>
+            <div class="login_submit_container"><button id="login_submit_button" type="submit" onclick="login_user(event)">LOG IN</button></div>
+            <div style="overflow:auto;margin-top:10px;font-size:15px;">
+            <div class="login_newusertext">New User? <a href="https://mypage.w3schools.com/mypage/login.php?logintyp=1" target="_blank">Sign Up For Free!</a></div>
+            <div class="login_forgotpasswordtext"><a href="https://mypage.w3schools.com/mypage/forgot_password.php">Forgot password?</a></div>
+            </div>
+          </form>
+        </div>
       </div>
-    </section>
+      <br>
+    </div>
+
+
   </div>
-</footer>
-
-		
-		<script type="text/javascript">
-			var Grabcad = Grabcad || {};
-			Grabcad.configuration = Grabcad.configuration || {};
-			Grabcad.configuration.evaluatorServer = {};
-			Grabcad.configuration.flash = {};
-			Grabcad.configuration.imagePath = 'https://d1pspl52z5rk07.cloudfront.net/images';
-			Grabcad.configuration.subscribe_key = 'sub-c-f3158300-f382-11e2-b871-02ee2ddab7fe';
-			Grabcad.configuration.recaptcha_key = '6LdkkBkUAAAAAOpZhSajb_PoE1sw3mORcZhLNkKe';
-			Grabcad.stats = {"files":4600000,"engineers":8610000};
-			Grabcad.member = null;
-			Grabcad.filters = {"softwares":[{"id":10,"name":"Alibre Design","cached_slug":"alibre-design"},{"id":40,"name":"ArchiCAD","cached_slug":"archicad"},{"id":15,"name":"AutoCAD","cached_slug":"autocad"},{"id":24,"name":"AutoCAD Electrical","cached_slug":"autocad-electrical"},{"id":28,"name":"Autodesk 3ds Max","cached_slug":"autodesk-3ds-max"},{"id":23,"name":"Autodesk Alias","cached_slug":"autodesk-alias"},{"id":1,"name":"Autodesk Inventor","cached_slug":"autodesk-inventor"},{"id":46,"name":"Autodesk Maya","cached_slug":"autodesk-maya"},{"id":9,"name":"Autodesk Revit","cached_slug":"autodesk-revit"},{"id":285,"name":"Autodesk 123D","cached_slug":"autodesk-123d"},{"id":25,"name":"BricsCAD","cached_slug":"bricscad"},{"id":153,"name":"Bentley MicroStation","cached_slug":"bentley-microstation"},{"id":80,"name":"BlenderCAD","cached_slug":"blendercad"},{"id":252,"name":"BobCAD-CAM","cached_slug":"bobcad-cam"},{"id":2,"name":"CATIA","cached_slug":"catia"},{"id":287,"name":"Delmia","cached_slug":"delmia"},{"id":21,"name":"DraftSight","cached_slug":"draftsight"},{"id":117,"name":"FreeCAD","cached_slug":"freecad"},{"id":26,"name":"Femap","cached_slug":"femap"},{"id":47,"name":"Fusion 360","cached_slug":"fusion-360"},{"id":44,"name":"Geomagic Design","cached_slug":"geomagic-design"},{"id":16,"name":"IronCAD","cached_slug":"ironcad"},{"id":42,"name":"JT","cached_slug":"jt"},{"id":14,"name":"Kompas-3D","cached_slug":"kompas-3d"},{"id":12,"name":"KeyCreator","cached_slug":"keycreator"},{"id":83,"name":"KeyShot","cached_slug":"keyshot"},{"id":118,"name":"Lagoa","cached_slug":"lagoa"},{"id":32,"name":"Lightwave","cached_slug":"lightwave"},{"id":35,"name":"Luxology","cached_slug":"luxology"},{"id":33,"name":"Mastercam","cached_slug":"mastercam"},{"id":13,"name":"Moi3D","cached_slug":"moi3d"},{"id":5,"name":"NX Unigraphics","cached_slug":"nx-unigraphics"},{"id":116,"name":"OBJ","cached_slug":"obj"},{"id":219,"name":"Onshape","cached_slug":"onshape"},{"id":82,"name":"OpenSCAD","cached_slug":"openscad"},{"id":120,"name":"Parasolid","cached_slug":"parasolid"},{"id":39,"name":"Powermill","cached_slug":"powermill"},{"id":38,"name":"Powershape","cached_slug":"powershape"},{"id":4,"name":"Pro/Engineer Wildfire","cached_slug":"pro-slash-engineer-wildfire"},{"id":43,"name":"PTC Creo Parametric","cached_slug":"ptc-creo-parametric"},{"id":20,"name":"PTC Creo Elements","cached_slug":"ptc-creo-elements"},{"id":22,"name":"Rhino","cached_slug":"rhino"},{"id":7,"name":"SpaceClaim","cached_slug":"spaceclaim"},{"id":3,"name":"SOLIDWORKS","cached_slug":"solidworks"},{"id":186,"name":"solidThinking Evolve","cached_slug":"solidthinking-evolve"},{"id":45,"name":"SurfCAM","cached_slug":"surfcam"},{"id":6,"name":"Solid Edge","cached_slug":"solid-edge"},{"id":27,"name":"SolidFace","cached_slug":"solidface"},{"id":19,"name":"STEP / IGES","cached_slug":"step-slash-iges"},{"id":11,"name":"SketchUp","cached_slug":"sketchup"},{"id":17,"name":"STL","cached_slug":"stl"},{"id":119,"name":"TinkerCAD","cached_slug":"tinkercad"},{"id":31,"name":"TopSolid","cached_slug":"topsolid"},{"id":41,"name":"T-Flex CAD","cached_slug":"t-flex-cad"},{"id":34,"name":"TurboCAD","cached_slug":"turbocad"},{"id":36,"name":"VectorWorks","cached_slug":"vectorworks"},{"id":37,"name":"ViaCAD 3D","cached_slug":"viacad-3d"},{"id":286,"name":"VRML / WRL","cached_slug":"vrml-wrl"},{"id":30,"name":"ZW3D","cached_slug":"zw3d"},{"id":8,"name":"Other","cached_slug":"other"},{"id":18,"name":"Rendering","cached_slug":"rendering"},{"id":320,"name":"GrabCAD Community","cached_slug":"grabcad-community"},{"id":81,"name":"GrabCAD Workbench","cached_slug":"grabcad-workbench"},{"id":321,"name":"GrabCAD Print","cached_slug":"grabcad-print"},{"id":323,"name":"3D Manufacturing Format","cached_slug":"3d-manufacturing-format"}],"categories":[{"id":119,"name":"3D printing","cached_slug":"3d-printing"},{"id":2,"name":"Aerospace","cached_slug":"aerospace"},{"id":155,"name":"Agriculture","cached_slug":"agriculture"},{"id":101,"name":"Architecture","cached_slug":"architecture"},{"id":1,"name":"Automotive","cached_slug":"automotive"},{"id":104,"name":"Aviation","cached_slug":"aviation"},{"id":122,"name":"Components","cached_slug":"components"},{"id":188,"name":"Computer","cached_slug":"computer"},{"id":108,"name":"Construction","cached_slug":"construction"},{"id":109,"name":"Educational","cached_slug":"educational"},{"id":5,"name":"Electrical","cached_slug":"electrical"},{"id":114,"name":"Energy and Power","cached_slug":"energy-and-power"},{"id":7,"name":"Fixtures","cached_slug":"fixtures"},{"id":103,"name":"Furniture","cached_slug":"furniture"},{"id":118,"name":"Hobby","cached_slug":"hobby"},{"id":6,"name":"Household","cached_slug":"household"},{"id":111,"name":"Industrial design","cached_slug":"industrial-design"},{"id":106,"name":"Interior design","cached_slug":"interior-design"},{"id":112,"name":"Jewellery","cached_slug":"jewellery"},{"id":154,"name":"Just for fun","cached_slug":"just-for-fun"},{"id":102,"name":"Machine design","cached_slug":"machine-design"},{"id":3,"name":"Marine","cached_slug":"marine"},{"id":105,"name":"Medical","cached_slug":"medical"},{"id":107,"name":"Military","cached_slug":"military"},{"id":100,"name":"Miscellaneous","cached_slug":"miscellaneous"},{"id":113,"name":"Nature","cached_slug":"nature"},{"id":117,"name":"Piping","cached_slug":"piping"},{"id":116,"name":"Robotics","cached_slug":"robotics"},{"id":120,"name":"Speedrun","cached_slug":"speedrun"},{"id":4,"name":"Sport","cached_slug":"sport"},{"id":121,"name":"Tech","cached_slug":"tech"},{"id":8,"name":"Tools","cached_slug":"tools"},{"id":115,"name":"Toys","cached_slug":"toys"}]};
-		</script>
-		<script src="https://d1pspl52z5rk07.cloudfront.net/assets/production/app/community_frontend/application-f67020003f5370dfae24e567674775c68249fa8cf8893843890de3bb0016d7eb.js"></script>
-		<div class="feedbackContainer">
-	<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
-
-	<script>
-		Beacon('init', '95673dc0-6024-429e-be64-5211d77631fb');
-
-		Beacon('config', {
-			labels: {
-				answer: 'Search',
-				ask: 'Contact',
-				suggestedForYou: 'Related Articles',
-				searchLabel: 'Search our Help Center'
-			},
-			hideAvatars: true
-		});
-
-		Beacon('on', 'ready', () => {
-			Beacon('suggest', ["54f62cfce4b034c37ea93487", "54871f60e4b047e113e4f47a", "5492fd5ce4b07d03cb251434", "5488ad3ce4b0dc8d3cacde8d", "54934688e4b07d03cb25172a"])
-
-		});
-
-		function toggleBeacon(event) {
-			event.preventDefault();
-			event.stopImmediatePropagation();
-			Beacon('toggle');
-		}
-
-		$('#openHelp').click(toggleBeacon)
-
-		function closeBeacon() {
-			Beacon('close');
-		}
-
-		Beacon('on', 'open', () => {
-			$(document).click(closeBeacon);
-		});
-
-		Beacon('on', 'close', () => {
-			$(document).unbind('click', closeBeacon);
-		});
-
-	</script>
 </div>
 
-			<script src="//www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-		<script src="//cdn.optimizely.com/js/238376531.js"></script>
-		
+<script>
 
-		
-	</body>
+</script>
+
+
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">HTML</span> Tutorial</h2>
+<a target="_top" href="default.asp">HTML HOME</a>
+<a target="_top" href="html_intro.asp">HTML Introduction</a>
+<a target="_top" href="html_editors.asp">HTML Editors</a>
+<a target="_top" href="html_basic.asp">HTML Basic</a>
+<a target="_top" href="html_elements.asp">HTML Elements</a>
+<a target="_top" href="html_attributes.asp">HTML Attributes</a>
+<a target="_top" href="html_headings.asp">HTML Headings</a>
+<a target="_top" href="html_paragraphs.asp">HTML Paragraphs</a>
+<a target="_top" href="html_styles.asp">HTML Styles</a>
+<a target="_top" href="html_formatting.asp">HTML Formatting</a>
+<a target="_top" href="html_quotation_elements.asp">HTML Quotations</a>
+<a target="_top" href="html_comments.asp">HTML Comments</a>
+<a target="_top" href="html_colors.asp">HTML Colors</a>
+<div class="tut_overview">
+  <a target="_top" href="html_colors.asp">Colors</a>
+  <a target="_top" href="html_colors_rgb.asp">RGB</a>
+  <a target="_top" href="html_colors_hex.asp">HEX</a>
+  <a target="_top" href="html_colors_hsl.asp">HSL</a>
+</div>
+<a target="_top" href="html_css.asp">HTML CSS</a>
+<a target="_top" href="html_links.asp">HTML Links</a>
+<div class="tut_overview">
+  <a target="_top" href="html_links.asp">Links</a>
+  <a target="_top" href="html_links_colors.asp">Link Colors</a>
+  <a target="_top" href="html_links_bookmarks.asp">Link Bookmarks</a>
+</div>
+<a target="_top" href="html_images.asp">HTML Images</a>
+<div class="tut_overview">
+  <a target="_top" href="html_images.asp">Images</a>
+  <a target="_top" href="html_images_imagemap.asp">Image Map</a>
+  <a target="_top" href="html_images_background.asp">Background Images</a>
+  <a target="_top" href="html_images_picture.asp">The Picture Element</a>
+</div>
+<a target="_top" href="html_tables.asp">HTML Tables</a>
+<a target="_top" href="html_lists.asp">HTML Lists</a>
+<div class="tut_overview">
+<a target="_top" href="html_lists.asp">Lists</a>
+<a target="_top" href="html_lists_unordered.asp">Unordered Lists</a>
+<a target="_top" href="html_lists_ordered.asp">Ordered Lists</a>
+<a target="_top" href="html_lists_other.asp">Other Lists</a>
+</div>
+<a target="_top" href="html_blocks.asp">HTML Block &amp; Inline</a>
+<a target="_top" href="html_classes.asp">HTML Classes</a>
+<a target="_top" href="html_id.asp">HTML Id</a>
+<a target="_top" href="html_iframe.asp">HTML Iframes</a>
+<a target="_top" href="html_scripts.asp">HTML JavaScript</a>
+<a target="_top" href="html_filepaths.asp">HTML File Paths</a>
+<a target="_top" href="html_head.asp">HTML Head</a>
+<a target="_top" href="html_layout.asp">HTML Layout</a>
+<a target="_top" href="html_responsive.asp">HTML Responsive</a>
+<a target="_top" href="html_computercode_elements.asp">HTML Computercode</a>
+<a target="_top" href="html5_semantic_elements.asp">HTML Semantics</a>
+<a target="_top" href="html5_syntax.asp">HTML Style Guide</a>
+<a target="_top" href="html_entities.asp">HTML Entities</a>
+<a target="_top" href="html_symbols.asp">HTML Symbols</a>
+<a target="_top" href="html_emojis.asp">HTML Emojis</a>
+<a target="_top" href="html_charset.asp">HTML Charset</a>
+<a target="_top" href="html_urlencode.asp">HTML URL Encode</a>
+<a target="_top" href="html_xhtml.asp">HTML vs. XHTML</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Forms</h2>
+<a target="_top" href="html_forms.asp">HTML Forms</a>
+<a target="_top" href="html_forms_attributes.asp">HTML Form Attributes</a>
+<a target="_top" href="html_form_elements.asp">HTML Form Elements</a>
+<a target="_top" href="html_form_input_types.asp">HTML Input Types</a>
+<a target="_top" href="html_form_attributes.asp">HTML Input Attributes</a>
+<a target="_top" href="html_form_attributes_form.asp">HTML Input Form Attributes</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Graphics</h2>
+<a target="_top" href="html5_canvas.asp">HTML Canvas</a>
+<a target="_top" href="html5_svg.asp">HTML SVG</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Media</h2>
+<a target="_top" href="html_media.asp">HTML Media</a>
+<a target="_top" href="html5_video.asp">HTML Video</a>
+<a target="_top" href="html5_audio.asp">HTML Audio</a>
+<a target="_top" href="html_object.asp">HTML Plug-ins</a>
+<a target="_top" href="html_youtube.asp">HTML YouTube</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> APIs</h2>
+<a target="_top" href="html5_geolocation.asp">HTML Geolocation</a>
+<a target="_top" href="html5_draganddrop.asp">HTML Drag/Drop</a>
+<a target="_top" href="html5_webstorage.asp">HTML Web Storage</a>
+<a target="_top" href="html5_webworkers.asp">HTML Web Workers</a>
+<a target="_top" href="html5_serversentevents.asp">HTML SSE</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Examples</h2>
+<a target="_top" href="html_examples.asp">HTML Examples</a>
+<a target="_top" href="html_quiz.asp">HTML Quiz</a>
+<a target="_top" href="html_exercises.asp">HTML Exercises</a>
+<a target="_top" href="html_exam.asp">HTML Certificate</a>
+<a target="_top" href="html_summary.asp">HTML Summary</a>
+<a target="_top" href="html_accessibility.asp">HTML Accessibility</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> References</h2>
+<a target="_top" href="/tags/default.asp">HTML Tag List</a>
+<a target="_top" href="/tags/ref_attributes.asp">HTML Attributes</a>
+<a target="_top" href="/tags/ref_standardattributes.asp">HTML Global Attributes</a>
+<a target="_top" href="/tags/ref_html_browsersupport.asp">HTML Browser Support</a>
+<a target="_top" href="/tags/ref_eventattributes.asp">HTML Events</a>
+<a target="_top" href="/tags/ref_colornames.asp">HTML Colors</a>
+<a target="_top" href="/tags/ref_canvas.asp">HTML Canvas</a>
+<a target="_top" href="/tags/ref_av_dom.asp">HTML Audio/Video</a>
+<a target="_top" href="/tags/ref_html_dtd.asp">HTML Doctypes</a>
+<a target="_top" href="/tags/ref_charactersets.asp">HTML Character Sets</a>
+<a target="_top" href="/tags/ref_urlencode.asp">HTML URL Encode</a>
+<a target="_top" href="/tags/ref_language_codes.asp">HTML Lang Codes</a>
+<a target="_top" href="/tags/ref_httpmessages.asp">HTTP Messages</a>
+<a target="_top" href="/tags/ref_httpmethods.asp">HTTP Methods</a>
+<a target="_top" href="/tags/ref_pxtoemconversion.asp">PX to EM Converter</a>
+<a target="_top" href="/tags/ref_keyboardshortcuts.asp">Keyboard Shortcuts</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+       
+      </div>
+<h1>HTML<span class="color_h1"> Tutorial</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="/default.asp">&#10094; Home</a>
+<a class="w3-right w3-btn" href="html_intro.asp">Next &#10095;</a>
+</div>
+
+<div class="w3-panel w3-info intro">
+<div class="w3-row-padding">
+<div class="w3-col w3-hide-small" style="width:140px">
+<p style="margin-top:12px"><b style="font-size:25px;font-family:Arial Black, Verdana, serif">HTML</b><br><i class="fa fa-html5" style="font-size:100px;color:#f06529"></i></p>
+</div>
+<div class="w3-rest">
+<p>HTML is the standard markup language for Web pages.</p>
+<p>With HTML you can create your own Website.</p>
+<p>HTML is easy to learn - You will enjoy it!</p>
+<a class="w3-btn w3-margin-bottom"  href="html_intro.asp">Start learning HTML now &raquo;</a>
+</div>
+</div>
+</div>
+<hr>
+
+<h2>Easy Learning with HTML &quot;Try it Yourself&quot;</h2>
+<p>With our &quot;Try it Yourself&quot; editor, you can edit the HTML code and view the 
+result:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>
+&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;This is a Heading&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryhtml_default" target="_blank">Try it Yourself &raquo;</a>
+</div>
+<p><strong>Click on the &quot;Try it Yourself&quot; button to see how it works.</strong></p>
+<hr>
+
+<h2>HTML Examples</h2>
+<p>In this HTML tutorial, you will find more than 200 examples. With our online 
+&quot;Try it Yourself&quot; editor, you can edit and test each example yourself!</p>
+<p><a href="html_examples.asp">Go to HTML Examples!</a></p>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+
+</div>
+<hr>
+<h2>HTML Exercises</h2>
+<p>This HTML tutorial also contains nearly 100 HTML exercises.</p>
+<form autocomplete="off" id="w3-exerciseform" action="exercise.asp?filename=exercise_html_attributes1" method="post" target="_blank">
+<h2>Test Yourself With Exercises</h2>
+<div class="exercisewindow">
+<h2>Exercise:</h2>
+<p>Add a "tooltip" to the paragraph below with the text "About W3Schools".</p>
+<div class="exerciseprecontainer">
+&lt;p <input name="ex1" maxlength="5" style="width: 54px;">="About W3Schools"&gt;W3Schools is a web developer's site.&lt;/p&gt;
+</div>
+<br>
+<button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+<p><a target="_blank" href="exercise.asp?filename=exercise_html_attributes1">Start the Exercise</a></p>
+</div>
+</form>
+<hr>
+<h2>HTML Quiz Test</h2>
+<p>Test your HTML skills with our HTML Quiz!</p>
+<p><a href="html_quiz.asp" class="w3-button w3-blue">Start HTML Quiz!</a></p>
+<hr>
+
+<h2>HTML References</h2>
+<p>At W3Schools you will find complete references about HTML elements, 
+attributes, events, color names, entities, character-sets, URL encoding, 
+language codes, HTTP messages, browser support, and more:</p>
+
+
+<div class="w3-row-padding" style="margin-left:-16px;margin-right:-16px">
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/default.asp">HTML Elements</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_html_browsersupport.asp">Browser Support</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_attributes.asp">Attributes</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_standardattributes.asp">Global Attributes</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_eventattributes.asp">Event Attributes</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_colornames.asp">Color Names</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_canvas.asp">Canvas</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_av_dom.asp">Audio/Video DOM</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_charactersets.asp">Character Sets</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_urlencode.asp">URL Encoding</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_language_codes.asp">Language Codes</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_country_codes.asp">Country Codes</a>
+</div>
+
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_httpmessages.asp">HTTP Messages</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_pxtoemconversion.asp">Px to Em Converter</a>
+</div>
+
+<div class="w3-third">
+  <a class="bigbtn" href="/tags/ref_keyboardshortcuts.asp">Keyboard Shortcuts</a>
+</div>
+
+
+</div>
+<br>
+
+<!--
+<hr>
+
+<h2>HTML Exam - Get Your Diploma!</h2>-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>  
+
+#w3_cert_badge {
+  position: absolute;
+  right: 5%;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: -20%;
+}
+
+#w3_cert_arrow {
+  position: absolute;
+  right: 220px;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: 0;
+  z-index: 1;
+}
+
+#getdiploma {
+  position: relative;
+  padding: 0 60px 50px 60px;
+  margin-bottom: 125px;
+  border-radius: 16px;
+  background-color: #282A35;
+  color: #FFC0C7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#getdiploma h2 {
+  font-size:50px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma p {
+  font-size: 42px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma a {
+  border-radius: 50px;
+  mxargin-top: 50px;
+  font-size: 18px;
+  background-color: #04AA6D;
+  padding: 17px 55px
+}
+
+#getdiploma a:hover,
+#getdiploma a:active {
+  background-color: #059862 !important;
+}
+
+
+@media screen and (max-width: 1442px) {
+  #w3_cert_arrow {
+    right: 212px;
+    bottom: -15px;
+  }
+}
+
+
+@media screen and (max-width: 1202px) {
+  #w3_cert_arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #w3_cert_arrow {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #w3_cert_arrow {
+    display: none;
+  }
+  #getdiploma h2 {
+    font-size: 44px;
+  }
+  #getdiploma p {
+    font-size: 30px;
+  }
+
+  #getdiploma a {
+    width: 100%;
+  }
+  #w3_cert_badge {
+    top: -16px;
+    right: -8px;
+    width: 100px;
+  }
+  #getdiploma  {
+    margin-bottom: 55px;
+  }
+}
+</style>
+
+<div class="w3-panel" id="getdiploma">
+
+<h2>Kickstart your career</h2>
+<p>Get certified by completing <span id="hey">the</span> <span id="coursetopic"></span> course</p>
+<script>
+var foldername;
+function getCourseFolder() {
+  var pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("/");
+  foldername = pathname.substr(0, pos);
+  foldername = foldername.toUpperCase();
+  if (foldername == "JS") foldername = "JavaScript";
+  if (foldername == "QUIZTEST") 
+  if (foldername == "QUIZTEST") {
+    document.getElementById("hey").innerText = "a";
+  }
+  if (foldername == "QUIZTEST") foldername = "";
+  if (foldername == "CS") foldername = "C#";
+  if (foldername == "CPP") foldername = "C++";
+  document.getElementById("coursetopic").innerText = foldername;
+}
+getCourseFolder();
+</script>
+<a class="w3-btn w3-margin-bottom" href="https://courses.w3schools.com/" target="_blank"  onclick="ga('send', 'event', 'Courses' , 'Clicked on ' + foldername + ' course banner in tutorial');">Get started</a>
+
+<svg id="w3_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg id="w3_cert_badge" data-name="w3_cert_badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">1</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
+
+</div>
+
+
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="/default.asp">&#10094; Home</a>
+<a class="w3-right w3-btn" href="html_intro.asp">Next &#10095;</a>
+</div>
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection">
+  <div id="skyscraper">
+  
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
+  
+  </div>
+</div>
+
+<div class="sidesection">
+<h4><a href="/colors/colors_picker.asp">COLOR PICKER</a></h4>
+<a href="/colors/colors_picker.asp">
+<img src="/images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection">
+  <h4>LIKE US</h4>
+  <div class="w3-text-grey sharethis">
+    <a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
+    <a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Instagram"><span class="fa fa-instagram fa-2x"></span></a>
+    <a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
+  </div>
+</div>
+
+<!--
+<div class="sidesection" style="border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda">
+<p>Get your<br>certification today!</p>
+<a href="/cert/default.asp" target="_blank">
+<img src="/images/w3certified_logo_250.png" style="margin:0 12px 20px 10px;max-width:80%">
+</a>
+<a class="w3-btn w3-margin-bottom" style="text-decoration:none;border-radius:5px;"
+href="/cert/default.asp" target="_blank">View options</a>
+</div>
+-->
+
+<style>
+#courses_get_started_btn {
+text-decoration:none !important;
+background-color:#04AA6D;
+width:100%;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+padding-top:10px;
+padding-bottom:10px;
+}
+#courses_get_started_btn:hover {
+background-color:#059862!important;
+}
+</style>
+
+<div class="sidesection" style="border-radius:5px;color:#FFC0C7;padding-top:1px;xpadding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#282A35">
+<p>Get certified<br>by completing<br>a course today!</p>
+<a href="https://courses.w3schools.com" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on courses banner in ads column');">
+<div style="padding:0 20px 20px 20px">
+<svg id="w3_cert_badge2" style="margin:auto;width:85%" data-name="w3_cert_badge2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">1</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
+</div>
+
+</a>
+<a class="w3-btn xw3-margin-bottom" id="courses_get_started_btn" 
+href="https://courses.w3schools.com" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on courses banner in ads column');">Get started</a>
+</div>
+
+<!--
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<a href="https://shop.w3schools.com/" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="/images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+-->
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<!--
+<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
+  <div class="w3-container w3-text-white">
+    <h4>Exercises</h4>
+  </div>
+  <div>
+    <div class="w3-light-grey">
+      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
+      <a target="_blank" href="/css/exercise.asp">CSS</a>
+      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
+      <a target="_blank" href="/sql/exercise.asp">SQL</a>
+      <a target="_blank" href="/php/exercise.asp">PHP</a>
+      <a target="_blank" href="/python/exercise.asp">Python</a>
+      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
+      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="/howto/default.asp" class="w3-hover-text-white">HOW TO</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="/howto/howto_js_tabs.asp">Tabs</a><br>
+    <a href="/howto/howto_css_dropdown.asp">Dropdowns</a><br>
+    <a href="/howto/howto_js_accordion.asp">Accordions</a><br>
+    <a href="/howto/howto_js_sidenav.asp">Side Navigation</a><br>
+    <a href="/howto/howto_js_topnav.asp">Top Navigation</a><br>
+    <a href="/howto/howto_css_modals.asp">Modal Boxes</a><br>
+    <a href="/howto/howto_js_progressbar.asp">Progress Bars</a><br>
+    <a href="/howto/howto_css_parallax.asp">Parallax</a><br>
+    <a href="/howto/howto_css_login_form.asp">Login Form</a><br>
+    <a href="/howto/howto_html_include.asp">HTML Includes</a><br>
+    <a href="/howto/howto_google_maps.asp">Google Maps</a><br>
+    <a href="/howto/howto_js_rangeslider.asp">Range Sliders</a><br>
+    <a href="/howto/howto_css_tooltip.asp">Tooltips</a><br>
+    <a href="/howto/howto_js_slideshow.asp">Slideshow</a><br>
+    <a href="/howto/howto_js_sort_list.asp">Sort List</a><br>
+  </div>
+</div>
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h5><a href="/cert/default.asp" class="w3-hover-text-white">Certificates</a></h5>
+  </div>
+  <div class="w3-border">
+  <a href="/cert/cert_html.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
+  <a href="/cert/cert_css.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
+  <a href="/cert/cert_javascript.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="/cert/cert_frontend.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Front End</a>
+  <a href="/cert/cert_python.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
+  <a href="/cert/cert_sql.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
+  <a href="/cert/default.asp" class="w3-button w3-light-grey w3-block" style="text-decoration:none">And more</a>
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", fix_stickyad);
+  window.addEventListener("resize", fix_stickyad);
+</script>
+
+</div>
+</div>
+<div id="footer" class="footer w3-container w3-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+</div>
+<!--
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+</div>
+-->
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="/forum/default.asp" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="/about/default.asp" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+</div>
+
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+
+<h2>Report Error</h2>
+
+<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+<p>help@w3schools.com</p>
+<br>
+
+<!--
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-section">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">      
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+-->
+
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Tutorials</h4>
+<a href="/html/default.asp">HTML Tutorial</a><br>
+<a href="/css/default.asp">CSS Tutorial</a><br>
+<a href="/js/default.asp">JavaScript Tutorial</a><br>
+<a href="/howto/default.asp">How To Tutorial</a><br>
+<a href="/sql/default.asp">SQL Tutorial</a><br>
+<a href="/python/default.asp">Python Tutorial</a><br>
+<a href="/w3css/default.asp">W3.CSS Tutorial</a><br>
+<a href="/bootstrap/bootstrap_ver.asp">Bootstrap Tutorial</a><br>
+<a href="/php/default.asp">PHP Tutorial</a><br>
+<a href="/java/default.asp">Java Tutorial</a><br>
+<a href="/cpp/default.asp">C++ Tutorial</a><br>
+<a href="/jquery/default.asp">jQuery Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top References</h4>
+<a href="/tags/default.asp">HTML Reference</a><br>
+<a href="/cssref/default.asp">CSS Reference</a><br>
+<a href="/jsref/default.asp">JavaScript Reference</a><br>
+<a href="/sql/sql_ref_keywords.asp">SQL Reference</a><br>
+<a href="/python/python_reference.asp">Python Reference</a><br>
+<a href="/w3css/w3css_references.asp">W3.CSS Reference</a><br>
+<a href="/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap Reference</a><br>
+<a href="/php/php_ref_overview.asp">PHP Reference</a><br>
+<a href="/colors/colors_names.asp">HTML Colors</a><br>
+<a href="/java/java_ref_keywords.asp">Java Reference</a><br>
+<a href="/angular/angular_ref_directives.asp">Angular Reference</a><br>
+<a href="/jquery/jquery_ref_overview.asp">jQuery Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Examples</h4>
+<a href="/html/html_examples.asp">HTML Examples</a><br>
+<a href="/css/css_examples.asp">CSS Examples</a><br>
+<a href="/js/js_examples.asp">JavaScript Examples</a><br>
+<a href="/howto/default.asp">How To Examples</a><br>
+<a href="/sql/sql_examples.asp">SQL Examples</a><br>
+<a href="/python/python_examples.asp">Python Examples</a><br>
+<a href="/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
+<a href="/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a><br>
+<a href="/php/php_examples.asp">PHP Examples</a><br>
+<a href="/java/java_examples.asp">Java Examples</a><br>
+<a href="/xml/xml_examples.asp">XML Examples</a><br>
+<a href="/jquery/jquery_examples.asp">jQuery Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<!--
+<h4>Web Certificates</h4>
+<a href="/cert/default.asp">HTML Certificate</a><br>
+<a href="/cert/default.asp">CSS Certificate</a><br>
+<a href="/cert/default.asp">JavaScript Certificate</a><br>
+<a href="/cert/default.asp">SQL Certificate</a><br>
+<a href="/cert/default.asp">Python Certificate</a><br>
+<a href="/cert/default.asp">PHP Certificate</a><br>
+<a href="/cert/default.asp">Bootstrap Certificate</a><br>
+<a href="/cert/default.asp">XML Certificate</a><br>
+<a href="/cert/default.asp">jQuery Certificate</a><br>
+<a href="//www.w3schools.com/cert/default.asp" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+Get Certified &raquo;</a>
+-->
+
+<h4>Web Courses</h4>
+<a href="https://courses.w3schools.com/courses/html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML Course</a><br>
+<a href="https://courses.w3schools.com/courses/css" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS Course</a><br>
+<a href="https://courses.w3schools.com/courses/javascript" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript Course</a><br>
+<a href="https://courses.w3schools.com/programs/front-end" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on Front End course link in footer');">Front End Course</a><br>
+<a href="https://courses.w3schools.com/courses/sql" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on sql course link in footer');">SQL Course</a><br>
+<a href="https://courses.w3schools.com/courses/python" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on python course link in footer');">Python Course</a><br>
+<a href="https://courses.w3schools.com/courses/php" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on php course link in footer');">PHP Course</a><br>
+<a href="https://courses.w3schools.com/courses/jquery" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on jquery course link in footer');">jQuery Course</a><br>
+<a href="https://courses.w3schools.com/courses/java" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on Java course link in footer');">Java Course</a><br>
+<a href="https://courses.w3schools.com/courses/cplusplus" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on C++ course link in footer');">C++ Course</a><br>
+<a href="https://courses.w3schools.com/courses/c-sharp" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on bootstrap C# link in footer');">C# Course</a><br>
+<a href="https://courses.w3schools.com/courses/xml" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on xml course link in footer');">XML Course</a><br>
+<a href="https://courses.w3schools.com/" target="_blank" class="w3-button w3-margin-top w3-dark-grey w3-round" style="text-decoration:none" onclick="ga('send', 'event', 'Courses' , 'Clicked on get certified button in footer');">
+Get Certified &raquo;</a>
+
+
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using W3Schools, you agree to have read and accepted our <a href="/about/about_copyright.asp">terms of use</a>, 
+<a href="/about/about_privacy.asp">cookie and privacy policy</a>.<br><br>
+<a href="/about/about_copyright.asp">Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="//www.w3schools.com/w3css/default.asp">W3Schools is Powered by W3.CSS</a>.<br><br>
+<a href="//www.w3schools.com">
+<img style="width:150px;height:28px;border:0" src="/images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="/lib/w3schools_footer.js"></script>
+
+<script>
+
+loadUser();
+//activateElse();
+function loadUser() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("/");
+  foldername = pathname.substr(0, pos);
+  if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  if (foldername == "quiztest") {
+    cc = window.location.href;
+    pos = cc.indexOf("qtest=");
+    typ = cc.substr(pos + 6);
+  }
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
+        console.log(x);
+        activateElse();
+      } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
+        console.log(x);
+        activateMYPAGE(x, y);
+      } else {
+        activateElse();
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST", MyLearning.getUrl('api.meta'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
+}
+function finishedPage() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("/");
+  foldername = pathname.substr(0, pos);
+  if (pathname.indexOf("pandas") > -1) {foldername = "python/pandas";}
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "O") {
+        console.log(x);
+        registerPoint(x);
+      } else {
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST", MyLearning.getUrl('api.meta'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
+}
+function activateElse() {
+  var a = document.getElementById("mypagediv");
+  var b = document.getElementById("w3loginbtn");
+  if (a) a.style.display = "none";
+  if (b) b.style.display = "inline";
+}
+var mp_pagesread = 0, mp_totalpages = 0;
+function activateMYPAGE(cc, obj) {
+  var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (a) a.style.display = "none";
+  if (b) {
+    if (cc == "I" || cc == "J" || cc == "O" || cc == "Q") {
+      jsonobj = JSON.parse(obj.substr(1));
+      mp_pagesread = jsonobj.b;
+      mp_totalpages = jsonobj.a;
+      x = Math.round((mp_pagesread/mp_totalpages) * 100);
+      degrees = x * 3.6;
+      if (degrees > 359) degrees = 359.99;
+    }
+    if (cc == "Q") {
+      color1 = "rgba(44, 156, 202, 0.1)";
+      color2 = "rgba(44, 156, 202, 1)";
+    }
+    b.style.display = "block";
+    txt += "<a href='https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F'>";
+//  txt += "<a href='https://mypage.w3schools.com/mypage/default.php'>";
+    txt2 = txt;
+    txt += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;right:28px'>";
+    txt2 += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;margin-left:10px;xright:28px'>";
+    if (cc != "F") {
+      txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+      txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt += '</svg>';
+      txt2 += '<svg style="position:absolute;xtop:0;xright:0;height:70px;width:70px">';
+      txt2 += '<path id="mypage2_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt2 += '</svg>';
+    }
+    if (cc == "J") {
+      checkIfMypage2IsInView();
+      window.addEventListener("scroll", checkIfMypage2IsInView);
+    }
+    if (cc == "Q") {
+      if (degrees == 359.99) {
+        txt += "<span id='usergetsstar'>&#x2605;</span>";
+      }
+    }
+    txt += '</a>';
+    txt2 += '</a>';
+    b.innerHTML = "&nbsp;" + txt;
+    c.innerHTML = "&nbsp;" + txt2;
+    if (cc != "L") {
+      document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+      document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    }
+  }
+  ga('send', 'event', 'user', 'login');
+}
+function checkIfMypage2IsInView() {
+  var a = document.getElementById("mypagediv2");
+  if (isinviewport(a) || isaboveviewport(a)) {
+    finishedPage();
+    window.removeEventListener("scroll", checkIfMypage2IsInView);
+  }
+}
+function isinviewport(x) {
+  var rect = x.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+function isaboveviewport(x) {
+  var rect = x.getBoundingClientRect();
+  if (rect.top < 0) return true;
+  return false;
+}
+function registerPoint(cc) {
+  var x, degrees = 0, txt = "", txt2 = "", completed = 0, color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (c) {
+    mp_pagesread++;
+    x = Math.round((mp_pagesread/mp_totalpages) * 100);
+    degrees = x * 3.6;
+    if (degrees > 359) degrees = 359.99;
+    txt += "<span class='usergetspoint' id='usergetstutpoint'>+1</span>";
+    if (degrees == 359.99) {completed = 1;}
+    if (completed == 1) {
+      txt += "<span id='usergetsstar'>&#x2605;</span>";
+    }
+    c.innerHTML += txt;
+    document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+  }
+}
+
+
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</body>
 </html>
